@@ -30,12 +30,6 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:transparen
   background:transparent;
   z-index:100;
 }
-.chat-label {
-  position:absolute; top:0; left:0; right:0; z-index:110;
-  height:34px; display:flex; align-items:center; padding-left:16px;
-  background:rgba(7,7,10,0.95); border-bottom:1px solid rgba(255,255,255,0.08);
-  font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:2px; color:rgba(255,255,255,0.55);
-}
 
 /* ── WEBCAM — colonne droite ── */
 #webcam-zone {
@@ -45,13 +39,13 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:transparen
 
 /* ── WELCOME BADGE — bas gauche de la webcam ── */
 #welcome-badge {
-  position:absolute; left:544px; bottom:34px; z-index:150;
-  display:flex; align-items:center; gap:14px;
+  position:absolute; left:40px; bottom:20px; z-index:150;
+  display:flex; align-items:center; gap:16px;
 }
-.welcome-accent { width:6px; height:66px; background:#D4AF37; border-radius:3px; }
-.welcome-text-block { background:rgba(7,7,10,0.6); padding:10px 22px; border-radius:4px; }
+.welcome-accent { width:7px; height:82px; background:#D4AF37; border-radius:3px; }
+.welcome-text-block { background:rgba(7,7,10,0.6); padding:12px 26px; border-radius:4px; }
 .welcome-name {
-  font-family:'Bebas Neue',sans-serif; font-size:40px; letter-spacing:2px; color:#FFFFFF; line-height:1;
+  font-family:'Bebas Neue',sans-serif; font-size:54px; letter-spacing:2px; color:#FFFFFF; line-height:1;
   text-shadow:0 0 20px rgba(255,255,255,0.2), 0 4px 12px rgba(0,0,0,0.6);
 }
 .welcome-role {
@@ -71,7 +65,7 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:transparen
 </div>
 
 <!-- CHAT -->
-<div id="chat-zone"><div class="chat-label">CHAT</div></div>
+<div id="chat-zone"></div>
 
 <!-- WEBCAM -->
 <div id="webcam-zone"></div>
