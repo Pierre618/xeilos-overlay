@@ -11,7 +11,7 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:transparen
 /*
   SOURCES OBS / STREAMLABS placées SOUS cette page :
   - Partage d'écran : x=0 y=250  · 1080 × 608 (16:9)
-  - Caméra          : x=0 y=1010 · 1080 × 910
+  - Caméra          : x=0 y=1070 · 1080 × 850
 */
 #top { position:absolute; left:0; right:0; top:0; height:250px; background:#07070a;
   background-image:radial-gradient(ellipse 600px 260px at 50% 0%, rgba(166,24,32,0.22), transparent 70%); }
@@ -24,8 +24,16 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:transparen
 #clock { font-family:'IBM Plex Mono',monospace; font-size:22px; color:rgba(255,255,255,0.7); letter-spacing:2px; }
 #top-line { position:absolute; left:0; right:0; top:248px; height:2px; background:#A61820; }
 
-#band { position:absolute; left:0; right:0; top:858px; height:152px; background:#07070a; border-top:2px solid #A61820; border-bottom:2px solid #D4AF37;
-  display:flex; align-items:center; gap:22px; padding:0 30px; }
+#band { position:absolute; left:0; right:0; top:858px; height:212px; background:#07070a; border-top:2px solid #A61820; border-bottom:2px solid #D4AF37;
+  display:flex; flex-direction:column; justify-content:center; gap:14px; padding:0 30px; }
+.band-row { display:flex; align-items:center; gap:22px; }
+.cta { align-self:center; display:flex; align-items:center; gap:14px; padding:8px 26px; border-radius:40px;
+  background:linear-gradient(90deg,#A61820,#7d1218); border:1px solid #D4AF37; box-shadow:0 0 22px rgba(212,175,55,0.35);
+  font-size:30px; font-weight:600; letter-spacing:4px; animation:glow 2s ease-in-out infinite; }
+.cta b { color:#D4AF37; }
+.cta .arrow { display:inline-block; font-size:28px; animation:nudge 1s ease-in-out infinite; }
+@keyframes nudge { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+@keyframes glow { 0%,100%{box-shadow:0 0 14px rgba(212,175,55,0.25)} 50%{box-shadow:0 0 30px rgba(212,175,55,0.55)} }
 .event-badge { flex:none; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; padding:14px 18px; background:#A61820; border-radius:4px;
   font-family:'Bebas Neue',sans-serif; font-size:32px; letter-spacing:3px; line-height:0.95; text-align:center; }
 .tagline { font-size:29px; font-weight:500; letter-spacing:1.2px; line-height:1.18; color:rgba(255,255,255,0.9); }
@@ -44,9 +52,12 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:transparen
 <div id="top-line"></div>
 
 <div id="band">
+  <div class="band-row">
   <div class="event-badge"><svg width="38" height="26" viewBox="0 0 38 26" fill="none" aria-hidden="true"><path d="M1 25 L13 7 L19 15 L25 3 L37 25 Z" fill="#FFF"/><path d="M25 3 L29 10.5 L26.5 9 L24 11 L22 9.5 Z" fill="#D4AF37"/></svg><span>SOMMET DU<br>TRADING</span></div>
   <div class="tagline"><b>5 JOURS</b> POUR COMPRENDRE, ÉTAPE PAR ÉTAPE, COMMENT UTILISER LE TRADING COMME UNE <b>OPPORTUNITÉ</b>
     <span class="sub"><b>SANS RISQUER</b> VOTRE ARGENT · <b>SANS COMPTE</b> PERSONNEL</span></div>
+  </div>
+  <div class="cta"><span class="arrow">☝</span><span><b>CLIQUE EN BIO</b> POUR PRENDRE RDV</span><span class="arrow">☝</span></div>
 </div>
 
 <script>
